@@ -1,0 +1,20 @@
+
+/* FlEX CONTAINER */
+header {
+  display: flex;
+}
+
+/* Remove bullet points */
+li {
+  list-style: none;
+}
+
+iframe {
+  display: block;
+}
+
+@media (max-width: 500px) {
+  img {
+    width: 100px;
+  }
+}
