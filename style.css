@@ -1,31 +1,42 @@
 
-* {
-  /* border: 1px solid gold; */
-}
+
+
 
 * {
   box-sizing: border-box;
 }
 
+body {
+  padding: 10px;
+  max-width: 800px;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+/* === HEADER CONTENT === */
 #header-img {
   width: 60px;
   height: auto;
 }
-
 
 /* FlEX CONTAINER */
 header {
   display: flex;
   justify-content: space-around;
 }
+
 /* FLEX ITEMS */
 #logo-container {
   flex: 0 1 auto;
 }
+
 #logo-text {
   flex: 2 1 auto;
   margin-left: 15px;
 }
+
 #nav-bar {
   flex: 1 1 auto;
 }
@@ -37,14 +48,61 @@ header {
 }
 
 
+
+
+
+/* === SECTIONS CONTENT === */
+
+main {
+  max-width: 700px;
+  margin: auto;
+}
+
+section {
+  border: 1px solid pink;
+
+}
+
+/* === DEMO SECTION === */
 iframe {
   margin: 0 auto;
 }
 
+
+
+
+/* === PRICING SECTION === */
+
+/* flex container */
+#price-boxes {
+  display: flex;
+
+}
+/* flex items */
+#price-boxes > div {
+  border: 1px solid black;
+  flex-basis: calc(100%/3);
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: none;
+}
+
+#price-boxes ul {
+  padding: 0; /* removes list items indentation */
+}
+
+
+/* === EMAIL SIGNUP === */
 form {
   width: 75%;
   margin: 20px auto;
 }
+
+
+
+
 
 /* ===== FOOTER ====== */
 
@@ -73,4 +131,9 @@ iframe {
   img {
     width: 20px;
   }
+
+  #price-boxes {
+    flex-direction: column;
+  }
+
 }
