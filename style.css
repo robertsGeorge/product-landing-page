@@ -9,6 +9,7 @@
 body {
   padding: 10px;
   max-width: 800px;
+  margin: 0px auto;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -41,7 +42,7 @@ header {
   flex: 1 1 auto;
 }
 
-/* NESTED FLEX CONTAINER */
+/* NESTED FLEX CONTAINER - NAV */
 #nav-bar ul {
   display: flex;
   justify-content: space-around;
@@ -53,23 +54,36 @@ header {
 
 /* === SECTIONS CONTENT === */
 
+
+
 main {
   max-width: 700px;
   margin: auto;
+  margin-top: 50px;
 }
 
 section {
   border: 1px solid pink;
+  margin-top: 50px;
 
+}
+
+/* iframe container */
+#iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
 }
 
 /* === DEMO SECTION === */
 iframe {
-  margin: 0 auto;
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
-
-
-
 
 
 
@@ -78,17 +92,23 @@ iframe {
 /* flex container */
 #price-boxes {
   display: flex;
-
 }
-/* flex items */
+
+/* flex items && nested flex containers */
 #price-boxes > div {
   border: 1px solid black;
   flex-basis: calc(100%/3);
   margin: 5px;
+  padding: 0;
+  /* nested flex containers */
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: none;
+}
+
+#price-boxes button {
+  padding: 5px;
+  margin-top: 10px;
 }
 
 #price-boxes ul {
@@ -96,28 +116,56 @@ iframe {
 }
 
 
+
+
 /* === EMAIL SIGNUP === */
+
+/* Flex container */
 form {
-  width: 75%;
-  margin: 20px auto;
+  width: 40%;
+  min-width: 200px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Flex items */
+form > * {
+  margin: 8px;
+  width: 100%;
+}
 
+form > label {
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+}
 
+form #submit {
+  padding: 2px;
+}
 
 
 /* ===== FOOTER ====== */
 
-footer * {
-  margin: 0;
+footer {
+  margin-bottom: 5px;
   text-align: center;
 }
 /* FLEX CONTAINER */
 footer ul {
   display: flex;
   justify-content: center;
+  width: 50%;
+  margin: 0px auto;
   margin-bottom: 10px;
   padding: 0;
+}
+/* FLEX ITEMS */
+footer ul li {
+  display: inline-block;
+  margin: 0px 20px;
 }
 
 /* Remove bullet points */
@@ -125,10 +173,8 @@ li {
   list-style: none;
 }
 
-iframe {
-  display: block;
-}
 
+/* === Media Queries === */
 @media (max-width: 500px) {
   img {
     width: 20px;
