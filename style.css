@@ -1,18 +1,28 @@
 
 
-
-
 * {
   box-sizing: border-box;
 }
 
-body {
-  padding: 10px;
-  max-width: 800px;
-  margin: 0px auto;
-  font-family: 'Roboto', sans-serif;
-}
 
+/* ==== FONT SIZES ===== */
+
+/* As default is 16px, 62.5% sets default to 10px 
+(hard setting 10px would not inherit) */
+html { font-size: 62.5%; }
+html * { font-size: 1.6rem; } /* 16px default */
+h1 { font-size: 4rem; }
+h2 { font-size: 3rem; }
+h3 { font-size: 2rem; }
+/* =========================== */
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 10px; /* not inherited */
+  max-width: 800px; 
+  margin: 0px auto; /* not inherited */
+}
 
 
 
