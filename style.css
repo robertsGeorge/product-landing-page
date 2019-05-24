@@ -9,11 +9,11 @@
 
 /* As default is 16px, 62.5% sets default to 10px 
 (hard setting 10px would not inherit) */
-html { font-size: 62.5%; }
-html * { font-size: 1.6rem; } /* 16px default */
+html { font-size: 10px; }
 h1 { font-size: 4rem; }
 h2 { font-size: 3rem; }
 h3 { font-size: 2rem; }
+p, a { font-size: 1.6rem; }
 /* =========================== */
 
 
