@@ -12,21 +12,22 @@
 html { font-size: 10px; }
 h1 { font-size: 4rem; }
 h2 { font-size: 3rem; }
-h3 { font-size: 2rem; }
-p, a { font-size: 1.6rem; }
+h3, label { font-size: 2rem; }
+p, a, button, #submit { font-size: 1.6rem; }
+
+a, label { font-weight: bold }
 /* =========================== */
 
 
 /* ------------------------------------------------------
-color scheme (using GLOBALLY declared variables)
+color scheme (using GLOBALLY declared variables / (aka custom properties)
 --------------------------------------------------------*/
 
 :root {
   --secondary-color: #fff;
-  --main-color: #444;
+  --main-color: #333;
   --highlight-color: orange;
   --link-color: rgb(179, 118, 5);
-
 }
 
 * { color: var(--font-color) }
@@ -34,12 +35,23 @@ body {
   color: var(--secondary-color);
   background-color: var(--main-color) 
 }
-header, footer { 
+header { 
   color: var(--main-color); 
   background-color: var(--secondary-color);
 }
+h2 { color: var(--highlight-color) }
 a { color: var(--link-color) }
 
+#price-boxes > div {
+  color: var(--main-color); 
+  background-color: var(--secondary-color);
+}
+
+#price-boxes button { background-color: var(--highlight-color) }
+#submit { 
+  color: var(--main-color); 
+  background-color: var(--highlight-color);
+}
 /* ---------------------------------------------------- */
 
 body {
@@ -140,19 +152,22 @@ iframe {
 
 /* flex items && nested flex containers */
 #price-boxes > div {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   flex-basis: calc(100%/3);
-  margin: 5px;
+  margin: 7px;
   padding: 0;
   /* nested flex containers */
   display: flex;
   flex-direction: column;
   text-align: center;
 }
+#price-boxes #soprano { margin-left: 0 }
+#price-boxes #tenor { margin-right: 0 }
 
 #price-boxes button {
-  padding: 5px;
+  padding: 7px;
   margin-top: 10px;
+  font-weight: bold;
 }
 
 #price-boxes ul {
@@ -168,7 +183,7 @@ iframe {
 form {
   width: 40%;
   min-width: 200px;
-  margin: 60px auto;
+  margin: 80px auto 60px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -181,49 +196,41 @@ form > * {
 }
 
 form > label {
-  font-weight: bold;
-  font-size: 1.2em;
   text-align: center;
 }
 
 form #submit {
-  padding: 2px;
+  padding: 5px;
 }
 
 
-/* ===== FOOTER ====== */
+/* ======================= FOOTER ====================== */
+
 /* FLEX CONTAINER */
 footer {
-  position: fixed;
-  /* justify-content: space-around; */
+  /* position: relative;
   bottom: 0;
   left: 0;
-  right: 0;
+  right: 0; */
+  width: 100%;
   display: flex;
-  /* text-align: center; */
-}
-/* FLEX ITEMS / CONTAINERS */
-footer > * {
-  display: flex;
-  /* justify-content: space-around; */
-  /* flex: 1 1 50vw; */
-  flex-basis: 50%;
-  /* width: 50%; */
-  /* margin: 0px auto; */
-  /* margin-bottom: 10px; */
-  border: 1px solid red;
-}
 
-#nav-list {
-  padding: 0;
 }
-
 /* FLEX ITEMS */
-footer ul li {
-  display: inline-block;
-  /* flex-basis: 200px; */
-  
-  /* margin: 0px 20px; */
+footer > p, footer > nav {
+  flex-basis: 50%;
+  /* border: 1px solid red; */
+}
+
+
+/* FLEX CONTAINER */
+#nav-footer {
+  display: flex;
+  padding-inline-start: 0;
+}
+/* FLEX ITEMS */
+#nav-footer li {
+  flex: 1;
 }
 
 
@@ -247,6 +254,12 @@ li {
 
   #price-boxes {
     flex-direction: column;
+  }
+
+  #nav-footer {
+    flex-direction: column;
+    /* align-content: center; */
+    align-items: center;
   }
 
 }
