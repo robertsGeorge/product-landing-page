@@ -24,8 +24,8 @@ color scheme (using GLOBALLY declared variables / (aka custom properties)
 --------------------------------------------------------*/
 
 :root {
-  --secondary-color: #fff;
-  --main-color: #333;
+  --secondary-color: #ddd;
+  --main-color: #222;
   --highlight-color: orange;
   --link-color: rgb(179, 118, 5);
 }
