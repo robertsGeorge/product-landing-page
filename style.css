@@ -74,6 +74,7 @@ header {
   display: flex;
   justify-content: space-around;
   position: fixed;
+  z-index: 1; /* so that x-frame scrolls underneath */
   top: 0;
   left: 0;
   right: 0;
